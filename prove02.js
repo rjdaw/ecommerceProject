@@ -1,26 +1,28 @@
+const path = require('path');
+
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
-// app.use((req, res, next) => {
-//     console.log("First middleware!");
-//     next();
-// });
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
-// app.use((req, res, next) => {
-//     console.log("Second middleware");
-//     res.send('<p>Assignment solved (almost!)</p>');
-// });
+const adminData = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
 
-// "/users" must be first because "/" applies to all paths that start with "/"
-app.use('/users', (req, res, next) => {
-    console.log('/users middleware');
-    res.send('<p>The Middleware that handles just /users</p>');
-});
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', (req, res, next) => {
-    console.log('/ middleware');
-    res.send('<p>The Middleware that handles just /</p>');
+app.use('/admin', adminData.routes);
+app.use(shopRoutes);
+
+app.use((req, res, next) => {
+    res.status(404).render('404', {
+        pageTitle: 'Page Not Found'
+    });
 });
 
 app.listen(3000);
