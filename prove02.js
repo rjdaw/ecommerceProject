@@ -8,8 +8,8 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-const adminData = require('./routes/admin');
-const shopRoutes = require('./routes/shop');
+const adminData = require('./routes/prove02/admin');
+const shopRoutes = require('./routes/prove02/shop');
 
 app.use(bodyParser.urlencoded({
     extended: false
