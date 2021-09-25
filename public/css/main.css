@@ -65,6 +65,7 @@ main {
 .card__header,
 .card__content {
   padding: 1rem;
+  padding-bottom: 0;
 }
 
 .card__header h1,
@@ -105,4 +106,14 @@ main {
 .btn:active {
   background-color: #00695c;
   color: white;
+}
+
+.checked {
+  color: orange;
+}
+
+.rating {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 26px;
 }
