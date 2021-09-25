@@ -19,10 +19,7 @@ const PORT = process.env.PORT || 5000; // So we can run on heroku || (OR) localh
 const app = express();
 
 // Route setup. You can implement more in the future!
-const ta01Routes = require('./routes/ta01');
-const ta02Routes = require('./routes/ta02');
-const ta03Routes = require('./routes/ta03');
-const ta04Routes = require('./routes/ta04');
+const adminRoutes = require('./routes/prove02/admin');
 
 app
   .use(express.static(path.join(__dirname, 'public')))
@@ -43,10 +40,7 @@ app
       path: '/',
     });
   })
-  .use('/ta01', ta01Routes)
-  .use('/ta02', ta02Routes)
-  .use('/ta03', ta03Routes)
-  .use('/ta04', ta04Routes)
+  .use('/prove02', adminRoutes)
   .use((req, res, next) => {
     // 404 page
     res.render('pages/404', {
