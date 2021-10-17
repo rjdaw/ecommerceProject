@@ -25,13 +25,3 @@
 .product__description {
     text-align: center;
 }
-
-.checked {
-    color: orange;
-}
-
-.rating {
-    text-align: center;
-    padding-top: 10px;
-    font-size: 26px;
-}
