@@ -2,6 +2,10 @@
   margin: 1rem 0;
 }
 
+body {
+  background-image: url(https://jooinn.com/images/blank-parchment-texture-4.jpg);
+}
+
 .form-control label,
 .form-control input,
 .form-control textarea {

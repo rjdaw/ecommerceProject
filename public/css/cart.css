@@ -1,4 +1,5 @@
 .cart__item-list {
+  font-family: 'Kaushan Script', cursive;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,12 +8,18 @@
   max-width: 90%;
 }
 
+body {
+  background-image: url(https://jooinn.com/images/blank-parchment-texture-4.jpg);
+}
+
 .cart__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  font-size: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+  background-color: whitesmoke;
   margin-bottom: 1rem;
 }
 

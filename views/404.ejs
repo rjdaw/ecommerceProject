@@ -1,8 +1,14 @@
 <%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/error.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <%- include('includes/navigation.ejs') %>
-    <h1>Page Not Found!</h1>
+    <img id="error-img" src="https://i.pinimg.com/originals/26/d3/93/26d3932e1ced7a8d45a31a79636ebe9a.jpg" alt="Dark Alley">
+    <h1 id="heading400">I'm guessing you didn't want to come here alone...</h1>
+    <button id="return-btn" onclick="window.history.back()">Get out of here</button>
 
 <%- include('includes/end.ejs') %>
